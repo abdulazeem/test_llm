@@ -1,0 +1,18 @@
+open_api_key: ''
+loc: 'adsfads'
+
+background: 'static/background.jpg'
+side_image: 'static/side_image.jpg'
+side_logo: 'static/side_image.jpg'
+
+
+back_color: 'lightblue'
+hover_color: '#4AABCA'
+select_color: '#4AABCA'
+icon_color: '#DF6263'
+
+vdb_path: "vector_databases"
+tf_model_path: "faq/output/tf.pkl"
+tf_matrix_path: "faq/output/tfidf_matrix.npz"
+know_db_path: "faq/input"
+
