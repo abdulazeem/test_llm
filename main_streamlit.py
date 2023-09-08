@@ -28,7 +28,7 @@ lock_key = yaml_inputs['loc']
 #                                   SQLITE
 ##########################################################################################
 # Create a connection to the SQLite database
-# conn = sqlite3.connect('ntt_llm.db')
+# conn = sqlite3.connect('test_db.db')
 
 ##########################################################################################
 #                                   YAML Inputs
@@ -205,7 +205,7 @@ with st.sidebar:
 
 
 def on_click_callback():
-    conn = sqlite3.connect('ntt_llm.db')
+    conn = sqlite3.connect('test_db.db')
     c = conn.cursor()
     # Create a table with the specified columns
     c.execute('''CREATE TABLE IF NOT EXISTS new_response_table(
