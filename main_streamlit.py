@@ -340,41 +340,42 @@ elif (choose=='Contact'):
 
 
 elif (choose=="Chatbot"):
-    st.markdown("<h1 style='text-align: center; color: #1E345C;'>Virtual Assist</h1>",
+    st.markdown("<h1 style='text-align: center; color: #1E345C;'>Chat QnA</h1>",
                     unsafe_allow_html=True)
 
     # st.markdown("<h5 style='text-align: center; color: black;'>Hello...Before we start, can you please select the country and the"
     #             "process you are working for..</h1>",
     #             unsafe_allow_html=True)
 
-    c1, c2, c3 = st.columns([0.3, 0.3, 0.2])
+    # c1, c2, c3 = st.columns([0.3, 0.3, 0.2])
+    #
+    # with c1:
+    #     sel_1_path = os.path.join(dbs_path, '*')
+    #     sel_1 = glob.glob(sel_1_path)
+    #     sel_1 = [x.split('\\')[-1] for x in sel_1]
+    #
+    #     # custom_selectbox(options=sel_1, colors=["red", "green", "blue"])
+    #     selected_1 = st.selectbox(label="Select Folder", options=sel_1)
+    #
+    # with c2:
+    #     lang_proc = st.selectbox(label="Select Language", options=['English', 'Non-English'])
+    #
+    # with c3:
+    #     st.write('')
+    #     st.write('')
+    #     path_check = st.button(label='Submit')
+    #
+    # if selected_1:
+    #     vec_name = selected_1+'_vecdb'
 
-    with c1:
-        sel_1_path = os.path.join(dbs_path, '*')
-        sel_1 = glob.glob(sel_1_path)
-        sel_1 = [x.split('\\')[-1] for x in sel_1]
-
-        # custom_selectbox(options=sel_1, colors=["red", "green", "blue"])
-        selected_1 = st.selectbox(label="Select Folder", options=sel_1)
-
-    with c2:
-        lang_proc = st.selectbox(label="Select Language", options=['English', 'Non-English'])
-
-    with c3:
-        st.write('')
-        st.write('')
-        path_check = st.button(label='Submit')
-
-    if selected_1:
-        vec_name = selected_1+'_vecdb'
-        src_path_db = os.path.join(os.getcwd(), yaml_inputs['vdb_path'], selected_1, vec_name)
         # src_path_db = r'"' + src_path_db  + '"'
 
-    if path_check:
-        # st.write('working')
-        st.write()
-        st.session_state['path'] = src_path_db
 
+    lang_proc = 'English'
+    src_path_db = os.path.join(os.getcwd(), 'Doc1_vecdb')
+    # st.write('working')
+    st.write()
+    st.session_state['path'] = src_path_db
 
     if st.session_state.path:
         # st.write(f"Retrieved from {st.session_state.path}")
